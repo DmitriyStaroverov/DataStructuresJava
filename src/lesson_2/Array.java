@@ -6,7 +6,7 @@ public interface Array {
 
     void setElement(int value, int index);
 
-    void addElement();
+    void addElement(int value);
 
     void display();
 
@@ -14,6 +14,12 @@ public interface Array {
 
     boolean deleteElement(int value);
 
-
+    /**
+     * поиск элемента
+     *
+     * @param value искомое значение
+     * @return индекс первого найденного значения либо -1
+     */
+    int find(int value);
 
 }
