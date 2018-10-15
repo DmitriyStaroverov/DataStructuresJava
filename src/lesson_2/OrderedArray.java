@@ -24,5 +24,23 @@ public class OrderedArray extends ArrayImpl {
         currentSize++;
     }
 
-
+    @Override
+    public int find(int value) {
+        int low = 0; // нижняя граница
+        int high = currentSize - 1 ; // верхняя граница диапазона
+        int mid = 0;
+        while (low < high){
+            mid = (low + high) / 2;
+            if (data[mid] == value){
+                return mid;
+            }
+            if (data[mid] < value){
+                low= mid + 1;
+            }
+            if (data[mid] > value){
+                high = mid;
+            }
+        }
+        return -1;
+    }
 }
