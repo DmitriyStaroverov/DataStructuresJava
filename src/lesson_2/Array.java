@@ -2,17 +2,17 @@ package lesson_2;
 
 public interface Array {
 
-    int getElement(int index);
+    Integer getElement(int index);
 
-    void setElement(int value, int index);
+    void setElement(Integer value, int index);
 
-    void addElement(int value);
+    void addElement(Integer value);
 
     void display();
 
     int getSize();
 
-    boolean deleteElement(int value);
+    boolean deleteElement(Integer value);
 
     /**
      * поиск элемента
@@ -20,6 +20,6 @@ public interface Array {
      * @param value искомое значение
      * @return индекс первого найденного значения либо -1
      */
-    int find(int value);
+    int find(Integer value);
 
 }

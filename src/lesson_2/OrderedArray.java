@@ -7,13 +7,13 @@ public class OrderedArray extends ArrayImpl {
     }
 
     @Override
-    public void setElement(int value, int index) {
+    public void setElement(Integer value, int index) {
         throw new UnsupportedOperationException (  );
     }
 
     @Override
-    public void addElement(int value) {
-        int index = 0;
+    public void addElement(Integer value) {
+        int index;
         for (index = 0; index < currentSize; index++) {
             if (data[index] >= value) break;
         }
@@ -25,13 +25,13 @@ public class OrderedArray extends ArrayImpl {
     }
 
     @Override
-    public int find(int value) {
+    public int find(Integer value) {
         int low = 0; // нижняя граница
         int high = currentSize - 1 ; // верхняя граница диапазона
-        int mid = 0;
+        int mid;
         while (low < high){
             mid = (low + high) / 2;
-            if (data[mid] == value){
+            if (data[mid].equals ( value ) ){
                 return mid;
             }
             if (data[mid] < value){

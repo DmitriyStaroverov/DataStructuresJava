@@ -3,25 +3,25 @@ package lesson_2;
 public class ArrayImpl implements Array {
 
     protected int currentSize;
-    protected int[] data;
+    protected Integer[] data;
 
     public ArrayImpl(int size) {
         this.currentSize = 0;
-        this.data = new int[size];
+        this.data = new Integer[size];
     }
 
     @Override
-    public int getElement(int index) {
+    public Integer getElement(int index) {
         return data[index];
     }
 
     @Override
-    public void setElement(int value, int index) {
+    public void setElement(Integer value, int index) {
         this.data[index] = value;
     }
 
     @Override
-    public void addElement(int value) {
+    public void addElement(Integer value) {
         data[currentSize++] = value;
     }
 
@@ -40,7 +40,7 @@ public class ArrayImpl implements Array {
     }
 
     @Override
-    public boolean deleteElement(int value) {
+    public boolean deleteElement(Integer value) {
         System.out.print ("Deleting " + value);
         int targetIndex = find ( value );
         if (targetIndex == -1){
@@ -60,7 +60,7 @@ public class ArrayImpl implements Array {
      * @return индекс первого найденного значения либо -1
      */
     @Override
-    public int find(int value) {
+    public int find(Integer value) {
         int targetIndex;
         for (targetIndex = 0; targetIndex < currentSize; targetIndex++) {
             if (data[targetIndex] == value)
