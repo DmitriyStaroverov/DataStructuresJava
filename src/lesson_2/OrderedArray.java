@@ -42,5 +42,6 @@ public class OrderedArray extends ArrayImpl {
             }
         }
         return -1;
+
     }
 }
