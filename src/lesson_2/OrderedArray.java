@@ -1,18 +1,18 @@
 package lesson_2;
 
-public class OrderedArray extends ArrayImpl {
+public class OrderedArray<T extends Object & Comparable> extends ArrayImpl<T> {
 
     public OrderedArray(int size) {
         super ( size );
     }
 
     @Override
-    public void setElement(String value, int index) {
+    public void setElement(T value, int index) {
         throw new UnsupportedOperationException (  );
     }
 
     @Override
-    public void addElement(String value) {
+    public void addElement(T value) {
         int index;
         for (index = 0; index < currentSize; index++) {
             if (data[index].compareTo ( value) >= 0) break;
@@ -25,7 +25,7 @@ public class OrderedArray extends ArrayImpl {
     }
 
     @Override
-    public int find(String value) {
+    public int find(T value) {
         int low = 0; // нижняя граница
         int high = currentSize - 1 ; // верхняя граница диапазона
         int mid;
