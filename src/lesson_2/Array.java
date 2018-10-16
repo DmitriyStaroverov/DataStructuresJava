@@ -22,4 +22,10 @@ public interface Array<T extends Object & Comparable> {
      */
     int find(T value);
 
+    void bubbleSort();
+
+    void insertSort();
+
+    void selectSort();
+
 }

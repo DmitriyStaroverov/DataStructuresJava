@@ -68,4 +68,31 @@ public class ArrayImpl<T extends Object & Comparable> implements Array<T> {
         }
         return -1;
     }
+
+    @Override
+    public void bubbleSort() {
+        for (int i = 0; i < currentSize-1; i++) {
+            for (int j = 0; j < currentSize - 1 - i; j++) {
+                if (data[j].compareTo(data[j + 1]) > 1 ){
+                    exchange ( j, j + 1 );
+                }
+            }
+        }
+    }
+
+    private void exchange(int index1, int index2){
+        T temp = data[index1];
+        data[index1] = data[index2];
+        data[index2] = temp;
+    }
+
+    @Override
+    public void insertSort() {
+
+    }
+
+    @Override
+    public void selectSort() {
+
+    }
 }
