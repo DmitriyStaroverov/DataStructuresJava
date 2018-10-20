@@ -88,6 +88,17 @@ public class ArrayImpl<T extends Object & Comparable> implements Array<T> {
 
     @Override
     public void insertSort() {
+        T temp;
+        int index;
+        for (int i = 1; i < currentSize; i++) {
+            temp = data[i];
+            index = i;
+            while (index > 0 && data[index-1].compareTo ( temp ) >= 0){
+                data[index] = data[index - 1];
+                index--;
+            }
+            data[index] = temp;
+        }
 
     }
 

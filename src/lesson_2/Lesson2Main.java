@@ -10,8 +10,10 @@ public class Lesson2Main {
         array.addElement ( 4.678 );
         array.addElement ( 6.32 );
         array.display ();
-        System.out.println ("Select sort");
-        array.selectSort ();
+        System.out.println ("Insert sort");
+        array.insertSort ();
+        array.display ();
+        array.deleteElement ( 3.0 );
         array.display ();
 
     }
